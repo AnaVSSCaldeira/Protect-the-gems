@@ -1,0 +1,12 @@
+{
+    "level_description":{
+        "level_1":{
+            "title":"Começo das minas",
+            "description":"Seu primeiro serviço como robô de proteção das gemas começa aqui! Elimine qualquer tipo de inimigo que ousar se aproximar delas! Mesmo que sejam...Goblins!?"
+        },
+        "level_2":{
+            "title":"Continuando sua jornada",
+            "description":"Parece que seu primeiro serviço de proteção deu certo. Com um pouco mais de confiança você se sente mais preparado para derrotar mais tipos de inimigos...eu acho?"
+        }
+    }
+}
