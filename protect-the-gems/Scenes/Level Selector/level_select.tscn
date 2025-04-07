@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2jhyiaal56e"]
 
 [ext_resource type="Script" uid="uid://n58hc4rbab3k" path="res://Scenes/Level Selector/scripts/level_select.gd" id="1_twx0p"]
-[ext_resource type="Texture2D" uid="uid://b0hy18sh03c3u" path="res://Scenes/Level Selector/Images/fundo.png" id="2_djvii"]
+[ext_resource type="Texture2D" uid="uid://b0hy18sh03c3u" path="res://Scenes/Game/Images/fundo.png" id="2_djvii"]
 
 [node name="Level Select" type="Node2D"]
 script = ExtResource("1_twx0p")
