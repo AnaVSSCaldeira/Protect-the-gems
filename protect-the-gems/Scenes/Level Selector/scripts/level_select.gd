@@ -22,3 +22,6 @@ func _on_lvl_1_pressed():
 
 func _on_close_pressed():
 	lvl_desc.visible = false
+
+func _on_play_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Game/Scenes/Level_1.tscn")

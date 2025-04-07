@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2jhyiaal56e"]
 
-[ext_resource type="Script" path="res://Scenes/Level Selector/scripts/level_select.gd" id="1_twx0p"]
+[ext_resource type="Script" uid="uid://n58hc4rbab3k" path="res://Scenes/Level Selector/scripts/level_select.gd" id="1_twx0p"]
 [ext_resource type="Texture2D" uid="uid://b0hy18sh03c3u" path="res://Scenes/Level Selector/Images/fundo.png" id="2_djvii"]
 
 [node name="Level Select" type="Node2D"]
@@ -20,6 +20,7 @@ text = "FASE 1"
 metadata/_edit_use_anchors_ = true
 
 [node name="Level_desc" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(0.916529, 0.478794, 0.69773, 1)
 position = Vector2(945, 489)
 scale = Vector2(0.28, 0.28)
@@ -52,4 +53,5 @@ scale = Vector2(6.30548, 6.30548)
 text = "X"
 
 [connection signal="pressed" from="Map/Lvl_1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="Level_desc/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Level_desc/Close" to="." method="_on_close_pressed"]

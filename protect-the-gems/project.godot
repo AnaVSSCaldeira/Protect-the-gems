@@ -12,10 +12,5 @@ config_version=5
 
 config/name="Protect the Gems"
 run/main_scene="res://Scenes/Main menu/main_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
