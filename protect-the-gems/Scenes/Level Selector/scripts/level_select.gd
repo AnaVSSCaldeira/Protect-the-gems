@@ -11,6 +11,9 @@ func _ready():
 	var json = JSON.new()
 	final_json = json.parse_string(content)
 
+func change_cursor():
+	Input.set_custom_mouse_cursor($"/root/Global".current_weapon)
+
 func read_json(key: String):
 	print((final_json.level_description)[key]["title"])
 	return (final_json.level_description)[key]["title"]+"\n"+(final_json.level_description)[key]["description"]
@@ -24,4 +27,5 @@ func _on_close_pressed():
 	lvl_desc.visible = false
 
 func _on_play_pressed():
+	change_cursor()
 	get_tree().change_scene_to_file("res://Scenes/Game/Scenes/Level_1.tscn")

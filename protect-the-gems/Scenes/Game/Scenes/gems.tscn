@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct2278gna64sm"]
+[gd_scene load_steps=3 format=3 uid="uid://ct2278gna64sm"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s73w8"]
+[ext_resource type="Texture2D" uid="uid://u14yk4m670gp" path="res://Scenes/Game/Images/mine_cart.png" id="1_fptik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fptik"]
+size = Vector2(180, 109)
 
 [node name="Gems" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_fptik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_s73w8")
+shape = SubResource("RectangleShape2D_fptik")

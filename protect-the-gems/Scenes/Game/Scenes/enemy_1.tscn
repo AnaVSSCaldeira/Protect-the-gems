@@ -1,32 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://bown23rvnfc4g"]
+[gd_scene load_steps=5 format=3 uid="uid://bown23rvnfc4g"]
 
 [ext_resource type="Script" uid="uid://5375qxkes1m6" path="res://Scenes/Game/Scripts/enemy_1.gd" id="1_nis3v"]
 [ext_resource type="Texture2D" uid="uid://cvo7smmjpgmov" path="res://icon.svg" id="1_suyoc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_igjjb"]
+radius = 60.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nis3v"]
 radius = 60.0083
 
 [node name="Enemy_1" type="CharacterBody2D"]
 light_mask = 2
-visibility_layer = 3
+visibility_layer = 2
 script = ExtResource("1_nis3v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.309804, 0.231373, 1)
 texture = ExtResource("1_suyoc")
 
+[node name="Life" type="ProgressBar" parent="."]
+texture_filter = 1
+offset_left = -63.0
+offset_top = -96.0
+offset_right = 63.0
+offset_bottom = -69.0
+max_value = 10.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_igjjb")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_nis3v")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_postprocessing = 1
-avoidance_enabled = true
-time_horizon_obstacles = 2.14
-debug_enabled = true
 debug_path_custom_point_size = 10.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
 
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
