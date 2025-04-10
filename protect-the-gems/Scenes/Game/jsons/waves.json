@@ -1,0 +1,30 @@
+{
+	"level_1": {
+			"wave_1": {
+				"enemies_list": ["goblin"]
+			},
+			"wave_2": {
+				"enemies_list": ["goblin"]
+			},
+			"wave_3": {
+				"enemies_list": ["goblin"]
+			},
+			"wave_4": {
+				"enemies_list": ["goblin"]
+			}
+	},
+	"level_2": {
+		"wave_1": {
+				"enemies_list": ["goblin", "enemy_2"]
+			},
+			"wave_2": {
+				"enemies_list": ["goblin"]
+			},
+			"wave_3": {
+				"enemies_list": ["goblin", "enemy_2"]
+			},
+			"wave_4": {
+				"enemies_list": ["goblin"]
+			}
+	}
+}

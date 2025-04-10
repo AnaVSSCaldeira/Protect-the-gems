@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://u14yk4m670gp" path="res://Scenes/Game/Images/mine_cart.png" id="1_fptik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fptik"]
-size = Vector2(180, 109)
+size = Vector2(147, 82.5)
 
 [node name="Gems" type="Area2D"]
 

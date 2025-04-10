@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=4 uid="uid://cbyx5qfnymici"]
+[gd_scene load_steps=12 format=4 uid="uid://cbyx5qfnymici"]
 
-[ext_resource type="PackedScene" uid="uid://bown23rvnfc4g" path="res://Scenes/Game/Scenes/enemy_1.tscn" id="1_oydid"]
 [ext_resource type="PackedScene" uid="uid://bq7fnmypovtym" path="res://Scenes/Game/Scenes/game_manager.tscn" id="1_vh8iy"]
 [ext_resource type="Script" uid="uid://cr3sfm3aqmbdq" path="res://Scenes/Game/Scripts/level_1.gd" id="1_y573l"]
 [ext_resource type="Texture2D" uid="uid://yxgrlt4b0031" path="res://Scenes/Game/Images/mine_ground.png" id="2_olxeg"]
@@ -56,6 +55,13 @@ navigation_polygon = SubResource("NavigationPolygon_olxeg")
 position = Vector2(957, 483)
 
 [node name="Enemy_Spawner" parent="." instance=ExtResource("3_iwxkc")]
-position = Vector2(694, -163)
+position = Vector2(977, -130)
 
-[node name="Enemy_1" parent="Enemy_Spawner" instance=ExtResource("1_oydid")]
+[node name="Enemy_Spawner2" parent="." instance=ExtResource("3_iwxkc")]
+position = Vector2(-122, 128)
+
+[node name="Enemy_Spawner3" parent="." instance=ExtResource("3_iwxkc")]
+position = Vector2(1031, 1249)
+
+[node name="Enemy_Spawner4" parent="." instance=ExtResource("3_iwxkc")]
+position = Vector2(2104, 807)
