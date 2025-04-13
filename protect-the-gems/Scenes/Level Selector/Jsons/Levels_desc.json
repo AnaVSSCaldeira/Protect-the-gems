@@ -7,6 +7,18 @@
         "level_2":{
             "title":"Continuando sua jornada",
             "description":"Parece que seu primeiro serviço de proteção deu certo. Com um pouco mais de confiança você se sente mais preparado para derrotar mais tipos de inimigos...eu acho?"
+        },
+        "level_3":{
+            "title":"Adentrando mais fundo",
+            "description":"Parece que seu primeiro serviço de proteção deu certo. Com um pouco mais de confiança você se sente mais preparado para derrotar mais tipos de inimigos...eu acho?"
+        },
+        "level_4":{
+            "title":"Pegando o jeito",
+            "description":"Parece que seu primeiro serviço de proteção deu certo. Com um pouco mais de confiança você se sente mais preparado para derrotar mais tipos de inimigos...eu acho?"
+        },
+        "level_5":{
+            "title":"Um grande desafio",
+            "description":"Parece que seu primeiro serviço de proteção deu certo. Com um pouco mais de confiança você se sente mais preparado para derrotar mais tipos de inimigos...eu acho?"
         }
     }
 }
