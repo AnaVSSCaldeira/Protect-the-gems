@@ -45,6 +45,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAA
 tile_set = SubResource("TileSet_qx02m")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(-238, -168)
 navigation_polygon = SubResource("NavigationPolygon_olxeg")
 
@@ -61,41 +62,55 @@ position = Vector2(-69, 320)
 position = Vector2(1614, -102)
 
 [node name="Enemy_Spawner4" parent="." instance=ExtResource("3_iwxkc")]
-position = Vector2(-76, 951)
+position = Vector2(-98, 1124)
 
 [node name="Screen" type="Node2D" parent="."]
+process_mode = 3
 visible = false
+modulate = Color(0.027451, 0.819608, 1, 1)
 position = Vector2(969, 493)
 scale = Vector2(7.01953, 2.78516)
 
-[node name="Lose" type="Sprite2D" parent="Screen"]
+[node name="Background" type="Sprite2D" parent="Screen"]
 modulate = Color(0.689269, 0, 0.110284, 1)
 position = Vector2(6.12577, -17.2342)
 scale = Vector2(1.01085, 1.4425)
 texture = ExtResource("6_y573l")
 
-[node name="Game_Over" type="Label" parent="Screen"]
-offset_left = -52.2827
-offset_top = -89.0435
-offset_right = 60.7173
-offset_bottom = -28.0435
+[node name="Text" type="Label" parent="Screen"]
+offset_left = -57.4113
+offset_top = -90.1205
+offset_right = 69.5887
+offset_bottom = -15.1205
 text = "Game Over
 You lose all your gems :("
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="Win" type="Sprite2D" parent="Screen"]
-modulate = Color(4.33177e-07, 0.441401, 0.296354, 1)
-position = Vector2(6.12577, -17.2342)
-scale = Vector2(1.01085, 1.4425)
-texture = ExtResource("6_y573l")
+[node name="Close" type="Button" parent="Screen"]
+offset_left = 55.1319
+offset_top = -113.099
+offset_right = 73.1319
+offset_bottom = -82.0994
+text = "X"
 
-[node name="Level_win" type="Label" parent="Screen"]
-offset_left = -52.2827
-offset_top = -89.0435
-offset_right = 60.7173
-offset_bottom = -28.0435
-text = "You did it!
-Ready for the next level?"
-horizontal_alignment = 1
-autowrap_mode = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen"]
+offset_left = -25.2154
+offset_top = -4.30855
+offset_right = 67.7846
+offset_bottom = 61.6914
+scale = Vector2(0.692287, 1)
+
+[node name="Menu" type="Button" parent="Screen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Go to menu"
+
+[node name="Restart" type="Button" parent="Screen/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Restart"
+
+[connection signal="pressed" from="Screen/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Screen/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Screen/VBoxContainer/Restart" to="." method="_on_restart_pressed"]

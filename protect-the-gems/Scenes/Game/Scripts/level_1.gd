@@ -14,7 +14,26 @@ func return_gems():
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_custom_mouse_cursor(null)
-		get_tree().change_scene_to_file("res://Scenes/Main menu/main_menu.tscn")
+		$Screen.visible = true
+		get_tree().paused = true
 
 func game_over():
-	print("acabou")
+	get_tree().paused = true
+	$Screen.get_node("Text").text = "You loose all your gems!"
+	$Screen.visible = true
+
+func _on_menu_pressed():
+	get_tree().paused = false
+	Input.set_custom_mouse_cursor(null)
+	get_tree().change_scene_to_file("res://Scenes/Main menu/main_menu.tscn")
+
+func _on_restart_pressed():
+	$Screen.visible = false
+	get_tree().paused = false
+	Input.set_custom_mouse_cursor(null)
+	get_tree().reload_current_scene()
+
+func _on_close_pressed():
+	get_tree().paused = false
+	Input.set_custom_mouse_cursor($"/root/Global".current_weapon)
+	$Screen.visible = false
