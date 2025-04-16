@@ -6,6 +6,7 @@ var label
 var level
 
 func _ready():
+	$Money/Count.text = str($"/root/Global".player_money)
 	label = lvl_desc.get_node("Label")
 	var file = FileAccess.open("res://Scenes/Level Selector/Jsons/Levels_desc.json", FileAccess.READ)
 	var content = file.get_as_text()

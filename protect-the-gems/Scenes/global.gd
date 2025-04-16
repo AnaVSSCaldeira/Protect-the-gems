@@ -1,13 +1,13 @@
 extends Node
 
 #informacoes do player
-@export var current_weapon: CompressedTexture2D = load("res://icon.svg")
+@export var current_weapon: CompressedTexture2D = load("res://Scenes/Game/Images/weapon.png")
 @export var weapon_damage: int = 2
 @export var stun_time: float = 0.5
-@export var money: int = 0
+@export var player_money: int = 0
 
 #informacoes do jogo
-@export var progress: Node2D
+var finishied_waves = 0
 
 #waves de inimigos
 var final_json

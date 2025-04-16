@@ -111,6 +111,23 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "Restart"
 
+[node name="Money" type="Label" parent="."]
+offset_left = 1503.0
+offset_top = 12.0
+offset_right = 1817.0
+offset_bottom = 153.0
+theme_override_font_sizes/font_size = 70
+text = "Money:"
+
+[node name="Count" type="Label" parent="Money"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 4.0
+offset_right = 589.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 70
+text = "999"
+
 [connection signal="pressed" from="Screen/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Screen/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Screen/VBoxContainer/Restart" to="." method="_on_restart_pressed"]

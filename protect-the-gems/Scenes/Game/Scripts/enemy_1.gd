@@ -10,7 +10,7 @@ var initial_position
 
 func _ready():
 	initial_position = get_parent().position
-	gem = get_parent().call_parent()
+	gem = (get_parent().call_parent()).return_gems()
 	$Life.visible = false
 	make_path()
 
@@ -48,6 +48,7 @@ func _input(event):
 		$Stun_Timer.start()
 
 	if $Life.value == 0:
+		get_parent().spawn_coins(position)
 		queue_free()
 		
 func _on_navigation_agent_2d_target_reached():

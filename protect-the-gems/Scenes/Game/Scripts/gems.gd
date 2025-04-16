@@ -1,6 +1,6 @@
 extends Area2D
 
-var life = 1
+var life = 5
 
 func _on_area_entered(area:Area2D):
     if life > 0:
