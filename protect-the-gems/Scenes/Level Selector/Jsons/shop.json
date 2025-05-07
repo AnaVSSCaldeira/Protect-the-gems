@@ -1,0 +1,75 @@
+{
+    "weapons":[
+        {
+            "name": "Pá",
+            "image": "",
+            "description": "Uma simples ferramenta para cavar a terra.",
+            "stun_time": 1,
+            "price": 100
+        },
+        {
+            "name": "Picareta",
+            "image": "",
+            "description": "Uma famosa ferramenta para coletar minérios.",
+            "stun_time": 1.5,
+            "price": 200
+        },
+        {
+            "name": "Martelo Pesado",
+            "image": "",
+            "description": "Uma arma potente de batalha.",
+            "stun_time": 2,
+            "price": 300
+        },
+        {
+            "name": "Maça de Guerra",
+            "image": "",
+            "description": "Uma arma com um ataque bastante dolorido.",
+            "stun_time": 2.5,
+            "price": 400
+        },
+        {
+            "name": "Espadão",
+            "image": "",
+            "description": "Uma arma que pertencia a um jovem guerreiro.",
+            "stun_time": 5,
+            "price": 1000
+        }
+    ],
+    "traps":[
+        {
+            "name": "Holograma de gemas",
+            "image": "",
+            "description": "Uma armadilha para confundir os inimigos por um tempo.",
+            "damage": 0,
+            "stun_time": 0,
+            "price": 200
+        },
+        {
+            "name": "Mina de Stun",
+            "image": "",
+            "description": "Uma arma que dá dano em alguns inimigos em uma área e dá stun.",
+            "damage": 1,
+            "stun_time": 1.5,
+            "price": 500
+        }
+    ],
+    "powers":[
+        {
+            "name": "Congelamento",
+            "image": "",
+            "description": "Um efeito em área que dá stun em todos inimigos por um tempo.",
+            "damage": 0,
+            "stun_time": 1,
+            "price": 800
+        },
+        {
+            "name": "Lança Chamas",
+            "image": "",
+            "description": "Uma arma com combustível que dá dano por um tempo a vários inimigos.",
+            "damage": 1,
+            "stun_time": 0,
+            "price": 700
+        }
+    ]
+}

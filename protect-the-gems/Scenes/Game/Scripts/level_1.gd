@@ -36,14 +36,14 @@ func _process(delta):
 func game_over():
 	get_tree().paused = true
 	Input.set_custom_mouse_cursor(null)
-	$Screen.get_node("Text").text = "You loose all your gems!"
+	$Screen.get_node("Text").text = "Você perdeu todas as suas gemas!"
 	$Screen.get_node("Close").visible = false
 	$Screen.visible = true
 
 func level_complete():
 	get_tree().paused = true
 	Input.set_custom_mouse_cursor(null)
-	$Screen.get_node("Text").text = "You win!"
+	$Screen.get_node("Text").text = "Você ganhou! Eba!"
 	$Screen.get_node("Close").visible = false
 	$Screen.visible = true
 	$"/root/Global".player_money += money
@@ -51,7 +51,7 @@ func level_complete():
 func _on_menu_pressed():
 	get_tree().paused = false
 	Input.set_custom_mouse_cursor(null)
-	get_tree().change_scene_to_file("res://Scenes/Main menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level Selector/Scenes/level_select.tscn")
 
 func _on_restart_pressed():
 	$Screen.visible = false

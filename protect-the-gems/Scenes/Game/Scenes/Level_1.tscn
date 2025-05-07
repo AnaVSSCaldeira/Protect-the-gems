@@ -101,7 +101,7 @@ offset_right = 67.7846
 offset_bottom = 61.6914
 scale = Vector2(0.692287, 1)
 
-[node name="Menu" type="Button" parent="Screen/VBoxContainer"]
+[node name="Level_Selector" type="Button" parent="Screen/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "Go to menu"
@@ -129,5 +129,5 @@ theme_override_font_sizes/font_size = 70
 text = "999"
 
 [connection signal="pressed" from="Screen/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Screen/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Screen/VBoxContainer/Level_Selector" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Screen/VBoxContainer/Restart" to="." method="_on_restart_pressed"]

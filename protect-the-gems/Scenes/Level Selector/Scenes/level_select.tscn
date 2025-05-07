@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2jhyiaal56e"]
+[gd_scene load_steps=4 format=3 uid="uid://c2jhyiaal56e"]
 
-[ext_resource type="Script" uid="uid://n58hc4rbab3k" path="res://Scenes/Level Selector/scripts/level_select.gd" id="1_twx0p"]
-[ext_resource type="Texture2D" uid="uid://b0hy18sh03c3u" path="res://Scenes/Game/Images/fundo.png" id="2_djvii"]
+[ext_resource type="Script" uid="uid://n58hc4rbab3k" path="res://Scenes/Level Selector/scripts/level_select.gd" id="1_4o6xn"]
+[ext_resource type="Texture2D" uid="uid://b0hy18sh03c3u" path="res://Scenes/Game/Images/fundo.png" id="2_d2o6a"]
+[ext_resource type="PackedScene" uid="uid://ds38qnqn3odr5" path="res://Scenes/Level Selector/Scenes/shop.tscn" id="3_d2o6a"]
 
 [node name="Level Select" type="Node2D"]
-script = ExtResource("1_twx0p")
+script = ExtResource("1_4o6xn")
 
 [node name="Map" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("2_djvii")
+texture = ExtResource("2_d2o6a")
 
 [node name="Lvl_1" type="Button" parent="Map"]
 offset_left = -806.0
@@ -60,7 +61,7 @@ visible = false
 modulate = Color(0.916529, 0.478794, 0.69773, 1)
 position = Vector2(945, 489)
 scale = Vector2(0.28, 0.28)
-texture = ExtResource("2_djvii")
+texture = ExtResource("2_d2o6a")
 
 [node name="Label" type="Label" parent="Level_desc"]
 offset_left = -800.0
@@ -105,6 +106,18 @@ offset_bottom = 99.0
 theme_override_font_sizes/font_size = 70
 text = "9999"
 
+[node name="Shop" parent="." instance=ExtResource("3_d2o6a")]
+visible = false
+position = Vector2(963, 503)
+
+[node name="Shop_button" type="Button" parent="."]
+offset_left = 1778.0
+offset_top = 835.0
+offset_right = 1809.0
+offset_bottom = 866.0
+scale = Vector2(3, 3)
+text = "$"
+
 [connection signal="pressed" from="Map/Lvl_1" to="." method="_on_lvl_1_pressed"]
 [connection signal="pressed" from="Map/Lvl_2" to="." method="_on_lvl_2_pressed"]
 [connection signal="pressed" from="Map/Lvl_3" to="." method="_on_lvl_3_pressed"]
@@ -112,3 +125,4 @@ text = "9999"
 [connection signal="pressed" from="Map/Lvl_5" to="." method="_on_lvl_5_pressed"]
 [connection signal="pressed" from="Level_desc/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Level_desc/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Shop_button" to="." method="_on_button_pressed"]
