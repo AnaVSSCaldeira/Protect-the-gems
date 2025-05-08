@@ -35,41 +35,5 @@
             "stun_time": 5,
             "price": 1000
         }
-    ],
-    "traps":[
-        {
-            "name": "Holograma de gemas",
-            "image": "",
-            "description": "Uma armadilha para confundir os inimigos por um tempo.",
-            "damage": 0,
-            "stun_time": 0,
-            "price": 200
-        },
-        {
-            "name": "Mina de Stun",
-            "image": "",
-            "description": "Uma arma que dá dano em alguns inimigos em uma área e dá stun.",
-            "damage": 1,
-            "stun_time": 1.5,
-            "price": 500
-        }
-    ],
-    "powers":[
-        {
-            "name": "Congelamento",
-            "image": "",
-            "description": "Um efeito em área que dá stun em todos inimigos por um tempo.",
-            "damage": 0,
-            "stun_time": 1,
-            "price": 800
-        },
-        {
-            "name": "Lança Chamas",
-            "image": "",
-            "description": "Uma arma com combustível que dá dano por um tempo a vários inimigos.",
-            "damage": 1,
-            "stun_time": 0,
-            "price": 700
-        }
     ]
 }

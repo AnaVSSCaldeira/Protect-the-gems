@@ -108,7 +108,8 @@ text = "9999"
 
 [node name="Shop" parent="." instance=ExtResource("3_d2o6a")]
 visible = false
-position = Vector2(963, 503)
+position = Vector2(390, 849)
+scale = Vector2(3.44463, 3.44463)
 
 [node name="Shop_button" type="Button" parent="."]
 offset_left = 1778.0

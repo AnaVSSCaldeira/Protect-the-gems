@@ -2,10 +2,10 @@ extends Node
 
 #informacoes do player
 @export var current_weapon: CompressedTexture2D = load("res://Scenes/Game/Images/weapon.png")
-@export var weapon_id: int = -1
+@export var weapon_id: int = 0
 @export var weapon_damage: int = 2
 @export var stun_time: float = 0.5
-@export var player_money: int = 0
+@export var player_money: int = 9999
 @export var shop_list: Array = [{"name": "Holograma de gema", "buy": false}, {"name": "Mina de Stun", "buy": false}, {"name": "Congelamento", "buy": false}, {"name": "Lança Chamas", "buy": false}]
 
 #informacoes do jogo
@@ -49,24 +49,6 @@ func shop():
 	var list = []
 
 	#arma:
-	var weapon
-	if weapon_id < 5:
-		weapon = final_json.weapons[(weapon_id+1)]
-	else:
-		weapon = {}
-	list.append(weapon)
+	list.append(final_json.weapons[(weapon_id)])
 
-	#armadilhas:
-	for i in final_json.traps:
-		for y in shop_list:
-			if i.name == y.name:
-				if y.buy == false:
-					list.append(i)
-	#powers:
-	for i in final_json.powers:
-		for y in shop_list:
-			if i.name == y.name:
-				if y.buy == false:
-					list.append(i)
-	
 	return list
