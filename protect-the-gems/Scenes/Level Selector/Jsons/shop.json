@@ -2,36 +2,41 @@
     "weapons":[
         {
             "name": "Pá",
-            "image": "",
+            "image": "res://Scenes/Game/Images/pa.png",
             "description": "Uma simples ferramenta para cavar a terra.",
+            "damage": 3,
             "stun_time": 1,
             "price": 100
         },
         {
             "name": "Picareta",
-            "image": "",
+            "image": "res://Scenes/Game/Images/picareta.png",
             "description": "Uma famosa ferramenta para coletar minérios.",
+            "damage": 4,
             "stun_time": 1.5,
             "price": 200
         },
         {
             "name": "Martelo Pesado",
-            "image": "",
+            "image": "res://Scenes/Game/Images/martelao.png",
             "description": "Uma arma potente de batalha.",
+            "damage": 5,
             "stun_time": 2,
             "price": 300
         },
         {
             "name": "Maça de Guerra",
-            "image": "",
+            "image": "res://Scenes/Game/Images/maca.png",
             "description": "Uma arma com um ataque bastante dolorido.",
+            "damage": 6,
             "stun_time": 2.5,
             "price": 400
         },
         {
             "name": "Espadão",
-            "image": "",
+            "image": "res://Scenes/Game/Images/espadao.png",
             "description": "Uma arma que pertencia a um jovem guerreiro.",
+            "damage": 10,
             "stun_time": 5,
             "price": 1000
         }

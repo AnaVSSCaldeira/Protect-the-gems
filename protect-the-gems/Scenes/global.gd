@@ -14,11 +14,15 @@ var finishied_waves = 0
 #waves de inimigos
 var final_json
 
-func read_json_waves(spawner_lists):
-	var file_json = FileAccess.open("res://Scenes/Game/jsons/waves.json", FileAccess.READ)
+func read_json(link):
+	var file_json = FileAccess.open(link, FileAccess.READ)
 	var content = file_json.get_as_text()
 	var json = JSON.new()
 	final_json = json.parse_string(content)
+	return final_json
+
+func read_json_waves(spawner_lists):
+	final_json = read_json("res://Scenes/Game/jsons/waves.json")
 
 	var level
 	if(get_tree().current_scene):
@@ -41,14 +45,10 @@ func read_json_waves(spawner_lists):
 	return final_json
 
 func shop():
-	var file_json = FileAccess.open("res://Scenes/Level Selector/Jsons/shop.json", FileAccess.READ)
-	var content = file_json.get_as_text()
-	var json = JSON.new()
-	final_json = json.parse_string(content)
+	final_json = read_json("res://Scenes/Level Selector/Jsons/shop.json")
 
 	var list = []
-
 	#arma:
-	list.append(final_json.weapons[(weapon_id)])
-
+	if weapon_id < (final_json.weapons).size():
+		list.append(final_json.weapons[(weapon_id)])
 	return list
