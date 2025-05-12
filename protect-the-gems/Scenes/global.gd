@@ -5,7 +5,7 @@ extends Node
 @export var weapon_id: int = 0
 @export var weapon_damage: int = 2
 @export var stun_time: float = 0.5
-@export var player_money: int = 9999
+@export var player_money: int = 0
 @export var shop_list: Array = [{"name": "Holograma de gema", "buy": false}, {"name": "Mina de Stun", "buy": false}, {"name": "Congelamento", "buy": false}, {"name": "Lança Chamas", "buy": false}]
 
 #informacoes do jogo

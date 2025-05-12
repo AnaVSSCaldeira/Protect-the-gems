@@ -1,5 +1,17 @@
-extends Area2D
+extends CharacterBody2D
 
-func _on_mouse_entered():
-    var get_coin = (get_parent().call_parent()).get_coins(5)
-    queue_free()
+@onready var nav_agent = $NavigationAgent2D
+var speed = 800
+
+func _process(delta):
+	var dir = to_local(nav_agent.get_next_path_position()).normalized()
+	velocity = dir * speed
+	move_and_slide()
+
+# func _on_mouse_entered():
+#     var get_coin = (get_parent().call_parent()).get_coins(5)
+#     queue_free()
+
+func _ready():
+	var parent = get_parent()
+	nav_agent.target_position = (parent.get_parent().get_node("Money").get_node("Count")).global_position

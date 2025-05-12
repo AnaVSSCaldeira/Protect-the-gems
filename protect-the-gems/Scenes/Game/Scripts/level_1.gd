@@ -13,6 +13,7 @@ func _ready():
 	finishied_waves = enemy_spawner_list.size()
 	$"/root/Global".read_json_waves(enemy_spawner_list)
 	$Money/Count.text = str(money)
+	update_life()
 
 func return_gems():
 	child_gem = $Gems
@@ -29,8 +30,7 @@ func _process(delta):
 		$Screen.get_node("Close").visible = true
 		get_tree().paused = true
 
-	if finishied_waves == $"/root/Global".finishied_waves:
-		#confirmar se tem algum bicho na tela ainda
+	if finishied_waves == $"/root/Global".finishied_waves and ($Enemy_Spawner.get_child_count() == 2 and $Enemy_Spawner2.get_child_count() == 2 and $Enemy_Spawner3.get_child_count() == 2 and $Enemy_Spawner4.get_child_count() == 2):
 		level_complete()
 
 func game_over():
@@ -63,3 +63,6 @@ func _on_close_pressed():
 	get_tree().paused = false
 	Input.set_custom_mouse_cursor($"/root/Global".current_weapon)
 	$Screen.visible = false
+
+func update_life():
+	$Gems_count/Count.text = str($Gems.life)

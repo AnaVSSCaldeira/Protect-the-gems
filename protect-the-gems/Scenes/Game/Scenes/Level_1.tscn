@@ -128,6 +128,23 @@ offset_bottom = 145.0
 theme_override_font_sizes/font_size = 70
 text = "999"
 
+[node name="Gems_count" type="Label" parent="."]
+offset_left = 1503.0
+offset_top = 111.0
+offset_right = 1817.0
+offset_bottom = 252.0
+theme_override_font_sizes/font_size = 70
+text = "Gems:"
+
+[node name="Count" type="Label" parent="Gems_count"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 4.0
+offset_right = 589.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 70
+text = "999"
+
 [connection signal="pressed" from="Screen/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Screen/VBoxContainer/Level_Selector" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Screen/VBoxContainer/Restart" to="." method="_on_restart_pressed"]

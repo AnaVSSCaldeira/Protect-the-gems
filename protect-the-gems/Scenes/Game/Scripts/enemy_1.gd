@@ -53,3 +53,6 @@ func _input(event):
 		
 func _on_navigation_agent_2d_target_reached():
 	get_gem = true
+
+func _on_visible_detect_screen_exited():
+	queue_free()

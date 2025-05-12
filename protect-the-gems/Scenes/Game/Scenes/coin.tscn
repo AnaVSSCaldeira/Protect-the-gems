@@ -6,7 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_wub1v"]
 radius = 51.0
 
-[node name="Coin" type="Area2D"]
+[node name="Coin" type="CharacterBody2D"]
+floor_constant_speed = true
 script = ExtResource("1_wub1v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,4 +16,4 @@ texture = ExtResource("1_hj58i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wub1v")
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

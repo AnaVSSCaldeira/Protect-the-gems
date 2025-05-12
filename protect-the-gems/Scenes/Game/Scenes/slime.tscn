@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bown23rvnfc4g"]
+[gd_scene load_steps=5 format=3 uid="uid://duaoxb4itc2ke"]
 
-[ext_resource type="Script" uid="uid://5375qxkes1m6" path="res://Scenes/Game/Scripts/enemy_1.gd" id="1_nis3v"]
-[ext_resource type="Texture2D" uid="uid://cvo7smmjpgmov" path="res://icon.svg" id="1_suyoc"]
+[ext_resource type="Script" uid="uid://5375qxkes1m6" path="res://Scenes/Game/Scripts/enemy_1.gd" id="1_ogmac"]
+[ext_resource type="Texture2D" uid="uid://cvo7smmjpgmov" path="res://icon.svg" id="2_1p8va"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_igjjb"]
 radius = 60.0
@@ -9,14 +9,14 @@ radius = 60.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_nis3v"]
 radius = 60.0083
 
-[node name="Goblin" type="CharacterBody2D"]
+[node name="Slime" type="CharacterBody2D"]
 light_mask = 2
 visibility_layer = 2
-script = ExtResource("1_nis3v")
+script = ExtResource("1_ogmac")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.309804, 0.231373, 1)
-texture = ExtResource("1_suyoc")
+modulate = Color(0.351446, 0.574631, 0.985856, 1)
+texture = ExtResource("2_1p8va")
 
 [node name="Life" type="ProgressBar" parent="."]
 texture_filter = 1
@@ -29,9 +29,9 @@ step = 1.0
 value = 10.0
 show_percentage = false
 
-[node name="goblin" type="Area2D" parent="."]
+[node name="slime" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goblin"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime"]
 shape = SubResource("CircleShape2D_igjjb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -51,13 +51,8 @@ autostart = true
 [node name="Stun_Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Visible_detect" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(-3.8147e-06, -3.8147e-06)
-scale = Vector2(5.8, 5.8)
-
-[connection signal="mouse_entered" from="goblin" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="goblin" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="slime" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="slime" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
 [connection signal="timeout" from="Navigation_Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Stun_Timer" to="." method="_on_stun_timer_timeout"]
-[connection signal="screen_exited" from="Visible_detect" to="." method="_on_visible_detect_screen_exited"]
