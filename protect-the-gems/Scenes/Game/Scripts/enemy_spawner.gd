@@ -10,7 +10,6 @@ var flag = true
 
 func _process(delta):
 	if enemy_count >= enemies_list.size() and flag == true:
-		print("oi", enemy_count)
 		$"/root/Global".finishied_waves += 1
 		$Timer.stop()
 		flag = false
