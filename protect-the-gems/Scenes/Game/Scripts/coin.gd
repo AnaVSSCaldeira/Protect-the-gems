@@ -8,9 +8,8 @@ func _process(delta):
 	velocity = dir * speed
 	move_and_slide()
 
-# func _on_mouse_entered():
-#     var get_coin = (get_parent().call_parent()).get_coins(5)
-#     queue_free()
+func destroy():
+	queue_free()
 
 func _ready():
 	var parent = get_parent()

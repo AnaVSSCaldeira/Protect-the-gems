@@ -66,3 +66,8 @@ func _on_close_pressed():
 
 func update_life():
 	$Gems_count/Count.text = str($Gems.life)
+
+func _on_area_2d_body_entered(body:Node2D):
+	if body.name == "Coin":
+		get_coins(5)
+		body.destroy()
